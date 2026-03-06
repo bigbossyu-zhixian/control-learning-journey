@@ -30,3 +30,20 @@ The purpose of this repository is:
 - Learn Python for scientific computing
 - Understand control system modeling
 - Connect physics,mathematics and programming
+## 系统结构图
+
+```mermaid
+flowchart TD
+
+A[输入参数<br>u: 进水流量<br>A: 水箱截面积<br>k: 出水系数<br>h0: 初始水位]
+
+B[水箱数学模型<br>dh/dt = (u - k√h) / A]
+
+C[Python数值仿真<br>Euler积分]
+
+D[得到水位变化曲线<br>h(t)]
+
+A --> B
+B --> C
+C --> D
+```
